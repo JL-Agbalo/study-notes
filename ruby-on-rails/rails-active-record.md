@@ -164,7 +164,40 @@ Scopes help keep your code DRY (Don't Repeat Yourself) and make complex queries 
 
 ### Query Interface
 
+Active Record provides a rich query interface for interacting with your database. Here are some common methods:
+
+- Retrieve all records: `Product.all`
+- Find by primary key: `Product.find(1)`
+- Filter with conditions: `Product.where("price < ?", 100)`
+- Chain conditions: `Product.where("price < ?", 100).where(available: true)`
+- Order results: `Product.order(:name)`
+- Order direction: `Product.order(name: :desc)`
+- Select fields: `Product.select(:name, :price)`
+- Limit records: `Product.limit(10)`
+- Offset records: `Product.offset(10).limit(10)`
+- Combine queries: `Product.where("price < ?", 100).or(Product.where(available: true))`
+
+Example 1:
+
+```ruby
+# Retrieve all products with a price less than 100 and order them by name
+products = Product.where("price < ?", 100).order(:name)
+```
+
+This query fetches all products priced below 100 and sorts them alphabetically by name.
+
+Example 2:
+
+```ruby
+# Find the first 10 available products
+products = Product.where(available: true).limit(10)
+```
+
+This query retrieves the first 10 products that are marked as available.
+
 ### Active Record Relations
+
+https://www.youtube.com/watch?v=5mhuNSkV_vQ
 
 ### Eager Loading
 
@@ -180,6 +213,7 @@ Scopes help keep your code DRY (Don't Repeat Yourself) and make complex queries 
 
 ### Rails Scaffold Command
 
+Note: Not an active record
 The command `rails generate scaffold ModelName field1:type field2:type` creates a model, migration, controller, views, and routes for `ModelName` with fields `field1` and `field2`.
 
 ```bash
