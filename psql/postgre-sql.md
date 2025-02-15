@@ -268,3 +268,36 @@ The output of `EXPLAIN ANALYZE` provides detailed information about each step of
 - The total execution time
 
 Using `EXPLAIN ANALYZE` helps in optimizing queries by providing insights into the query execution process.
+
+### Sample Explain analyze and Index
+
+EXPLAIN ANALYZE SELECT first_name, last_name, email_address
+FROM customers
+WHERE last_name = 'Smith';
+-- Planning time: 0.270 ms
+-- Execution time: 1.741 ms
+
+CREATE INDEX customers_last_name_first_name_email_address_idx ON customers (last_name, first_name, email_address);
+
+EXPLAIN ANALYZE SELECT first_name, last_name, email_address
+FROM customers
+WHERE last_name = 'Smith';
+-- Planning time: 0.139 ms
+-- Execution time: 0.999 ms
+
+## Explanation of Clustered and Non-Clustered Indexes
+
+### Clustered Index:
+
+A clustered index determines the physical order of data in a table. There can be only one clustered index per table because the data rows themselves can be sorted in only one order. The clustered index is typically created on the primary key column.
+
+### Non-Clustered Index:
+
+A non-clustered index, on the other hand, does not alter the physical order of the data in the table. Instead, it creates a separate object within the table that points back to the original table rows after searching. There can be multiple non-clustered indexes on a table, and they are typically used to improve the performance of frequently used queries.
+
+### Example:
+
+Consider a table `Employees` with columns `EmployeeID`, `FirstName`, and `LastName`.
+
+- A clustered index on `EmployeeID` will sort the data rows by `EmployeeID`.
+- A non-clustered index on `LastName` will create a separate structure that allows quick lookups by `LastName` without changing the order of the data rows.
