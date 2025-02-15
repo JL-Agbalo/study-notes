@@ -10,32 +10,37 @@
 
 ## 2. **Rails Models**
 
-- [x] ActiveRecord Basics - rails-active-record.md
-- [x] Validations - rails-active-record.md
-- [x] Associations (has_many, belongs_to, has_one, etc.) - rails-active-record.md
-- [x] Scopes - rails-active-record.md
-- [x] Migrations and Schema Changes - rails-active-record.md
+- [x] ActiveRecord Basics
+- rails-active-record.md
+- [x] Validations
+- rails-active-record.md
+- [x] Associations (has_many, belongs_to, has_one, etc.)
+- rails-active-record.md
+- [x] Scopes -
+- rails-active-record.md
+- [x] Migrations and Schema Changes
+- rails-active-record.md
 
 ## 3. **Rails Views**
 
 - [x] Using Embedded Ruby (ERB) Templates
 - [x] Layouts and Partials
-- [x] Helper Methods
-- [x] Rendering JSON Responses
-- [x] Turbo and Hotwire Basics
+- [ ] Helper Methods
+- [ ] Rendering JSON Responses
+- [ ] Turbo and Hotwire Basics
 
 ## 4. **Rails Controllers**
 
 - [x] Understanding Controllers
-- [x] RESTful Routes
+- [ ] RESTful Routes
 - [x] Action Methods (index, show, new, create, edit, update, destroy)
-- [x] Redirects and Renders
-- [x] Strong Parameters
+- [ ] Redirects and Renders
+- [ ] Strong Parameters
 
 ## 5. **Authentication and Authorization**
 
 - [ ] Implementing User Authentication (Devise or custom solution)
-- [x] **JWT Authentication** (Implementing token-based authentication for APIs)
+- [ ] **JWT Authentication** (Implementing token-based authentication for APIs)
       https://www.youtube.com/watch?v=MWuRHY5XF40&list=PL6SEI86zExmvGeaquocN_umlbhJVhijqG
 - [ ] Authorization with Pundit or CanCanCan
 - [ ] Role-based Access Control (RBAC)
