@@ -121,3 +121,9 @@ https://www.youtube.com/watch?v=rhi1eIjSbvk
 ### Youtube
 
 https://www.youtube.com/watch?v=mL8EuL7jSbg&t=38s
+https://www.youtube.com/watch?v=yufqeJLP1rI
+https://www.youtube.com/watch?v=U6OcC0yq1CE&t=26s
+
+An SDK (Software Development Kit) is a collection of tools, libraries, and documentation that developers use to create applications for a specific platform or service. It simplifies the development process by providing pre-built components and functionalities.
+
+An API (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It defines the methods and data formats that applications can use to request and exchange information.
